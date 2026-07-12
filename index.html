@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta &amp; Dízimo · Antuérpia</title>
+<meta name="description" content="Dados bancários para oferta e dízimo — Antuérpia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b3a;
+    --parchment:#f3eee3;
+    --parchment-2:#ece4d3;
+    --brass:#a67c3d;
+    --brass-soft:#c9a06a;
+    --sage:#5f7460;
+    --charcoal:#2e2b26;
+    --line:rgba(28,43,58,0.16);
+    --shadow:0 1px 0 rgba(28,43,58,0.06);
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(166,124,61,0.08), transparent 60%),
+      var(--parchment);
+    color:var(--charcoal);
+    font-family:'Lora', Georgia, serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:64px 24px 96px;
+  }
+
+  header{
+    text-align:center;
+    margin-bottom:56px;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin:0 0 14px;
+  }
+
+  h1{
+    font-size:clamp(32px, 6vw, 46px);
+    font-weight:600;
+    line-height:1.1;
+    margin:0 0 10px;
+    color:var(--ink);
+  }
+
+  h1 em{
+    font-style:italic;
+    color:var(--brass);
+  }
+
+  .lede{
+    max-width:480px;
+    margin:0 auto;
+    color:rgba(46,43,38,0.72);
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .ledger{
+    border-top:1px solid var(--line);
+  }
+
+  .entry{
+    padding:36px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .entry-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:18px;
+  }
+
+  .place{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--sage);
+  }
+
+  .iban-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+  }
+
+  .iban{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:clamp(19px, 4.4vw, 25px);
+    font-weight:500;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    word-break:break-all;
+  }
+
+  .copy-btn{
+    appearance:none;
+    border:1px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:7px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    white-space:nowrap;
+  }
+
+  .copy-btn:hover{
+    background:var(--ink);
+    color:var(--parchment);
+  }
+
+  .copy-btn.copied{
+    background:var(--sage);
+    border-color:var(--sage);
+    color:var(--parchment);
+  }
+
+  dl{
+    margin:0;
+    display:grid;
+    grid-template-columns:120px 1fr;
+    row-gap:10px;
+    column-gap:16px;
+  }
+
+  dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:rgba(46,43,38,0.5);
+    padding-top:2px;
+  }
+
+  dd{
+    margin:0;
+    font-size:16px;
+    line-height:1.5;
+    color:var(--charcoal);
+  }
+
+  dd.name{
+    font-style:italic;
+  }
+
+  footer{
+    margin-top:48px;
+    text-align:center;
+    font-size:13px;
+    color:rgba(46,43,38,0.5);
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+
+  @media (max-width:480px){
+    dl{grid-template-columns:96px 1fr;}
+    .wrap{padding:48px 18px 72px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Igreja do Nazareno · Antuérpia</p>
+      <h1>Oferta &amp; <em>Dízimo</em></h1>
+      <p class="lede">Escolha uma das contas abaixo para a sua transferência. Toque em “copiar” para copiar o IBAN e use a descrição indicada no momento do pagamento.</p>
+    </header>
+
+    <section class="ledger">
+
+      <article class="entry">
+        <div class="entry-head">
+          <span class="place">Bélgica</span>
+        </div>
+        <div class="iban-row">
+          <span class="iban" data-raw="BE86894002871850">BE86 8940 0287 1850</span>
+          <button class="copy-btn" type="button" data-copy="BE86894002871850">Copiar</button>
+        </div>
+        <dl>
+          <dt>Em nome de</dt>
+          <dd class="name">"Nazarener Mechelen"</dd>
+          <dt>Descrição</dt>
+          <dd>"Oferta Antwerpen" ou "Dízimo Antuerpia"</dd>
+        </dl>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <span class="place">Países Baixos</span>
+        </div>
+        <div class="iban-row">
+          <span class="iban" data-raw="NL20INGB0654039038">NL20 INGB 0654 0390 38</span>
+          <button class="copy-btn" type="button" data-copy="NL20INGB0654039038">Copiar</button>
+        </div>
+        <dl>
+          <dt>Em nome de</dt>
+          <dd class="name">"Kerk van de Nazarener in Nederland"</dd>
+          <dt>Descrição</dt>
+          <dd>"Oferta Antwerpen" ou "Dízimo Antuerpia"</dd>
+        </dl>
+      </article>
+
+    </section>
+
+    <footer>Confirme sempre os dados antes de transferir.</footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var value = btn.getAttribute('data-copy');
+        var restore = btn.textContent;
+
+        function done(ok){
+          btn.textContent = ok ? 'Copiado ✓' : 'Erro';
+          btn.classList.toggle('copied', ok);
+          setTimeout(function(){
+            btn.textContent = restore;
+            btn.classList.remove('copied');
+          }, 1600);
+        }
+
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(value).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = value;
+          document.body.appendChild(ta);
+          ta.select();
+          try{ document.execCommand('copy'); done(true); } catch(e){ done(false); }
+          document.body.removeChild(ta);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
